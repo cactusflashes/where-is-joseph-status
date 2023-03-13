@@ -19,12 +19,12 @@ const firebaseConfig = {
   
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const auth = getAuth(app);
+//const auth = getAuth(app);
 //const email 
 //const password
 
-signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+//signInWithEmailAndPassword(auth, email, password)
+    //.then((userCredential) => {
 
 const dropdown = document.getElementById('dropdown-status');
 
@@ -45,4 +45,4 @@ dropdown.addEventListener('change', () => {
 
 });
     
-}); 
+//}); 
