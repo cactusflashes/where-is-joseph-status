@@ -20,8 +20,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth(app);
-const email = "jas2598@nau.edu";
-const password = "$n@puF0x";
+//const email 
+//const password
 
 signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
