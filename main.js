@@ -20,6 +20,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth(app);
+const email = "jas2598@nau.edu";
 
 signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
