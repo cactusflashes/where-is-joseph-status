@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
 
 console.log("hello, world!");
 
@@ -18,6 +19,10 @@ const firebaseConfig = {
   
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+const auth = getAuth(app);
+
+signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
 
 const dropdown = document.getElementById('dropdown-status');
 
@@ -37,4 +42,5 @@ dropdown.addEventListener('change', () => {
     });
 
 });
-
+    
+}); 
